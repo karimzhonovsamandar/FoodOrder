@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:elevation="0dp"
+    app:cardCornerRadius="22dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/home_food_image"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pop_menu_burger" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/home_food_name"
+            android:layout_width="80dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="23dp"
+            android:text=""
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView"
+            app:layout_constraintStart_toEndOf="@id/cardView"
+            app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+        <TextView
+            android:id="@+id/countBnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="54dp"
+            android:fontFamily="@font/lato"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/cart_btn"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/deleteBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:src="@drawable/ic_trush"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/countBnt"
+            app:layout_constraintStart_toStartOf="@+id/countBnt"
+            app:layout_constraintTop_toBottomOf="@+id/cart_btn" />
+
+        <TextView
+            android:id="@+id/cart_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/spacy_fresh_crab"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:fontFamily="@font/yeon_sung"
+            app:layout_constraintBottom_toTopOf="@+id/home_food_name"
+            app:layout_constraintStart_toStartOf="@+id/home_food_name"
+            app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+        <TextView
+            android:id="@+id/price_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:text="$7"
+            android:textColor="@color/mainColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView"
+            app:layout_constraintStart_toStartOf="@+id/home_food_name"
+            app:layout_constraintTop_toBottomOf="@+id/home_food_name" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/minusBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:text="—"
+            android:textColor="@color/white"
+            android:background="@drawable/plus_minus"
+            app:layout_constraintBottom_toBottomOf="@+id/countBnt"
+            app:layout_constraintEnd_toStartOf="@+id/countBnt"
+            app:layout_constraintTop_toTopOf="@+id/countBnt" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/plusBtn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="16dp"
+            android:text="+"
+            android:textColor="@color/white"
+            android:background="@drawable/plus_minus"
+            app:layout_constraintBottom_toBottomOf="@+id/countBnt"
+            app:layout_constraintStart_toEndOf="@+id/countBnt"
+            app:layout_constraintTop_toTopOf="@+id/countBnt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/history"
+        android:name="com.sammy.foodorder.fragments.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/cart"
+        android:name="com.sammy.foodorder.fragments.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/home"
+        android:name="com.sammy.foodorder.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_menuBottomSheet"
+            app:destination="@id/menuBottomSheetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.sammy.foodorder.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/search"
+        android:name="com.sammy.foodorder.fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/menuBottomSheetFragment"
+        android:name="com.sammy.foodorder.fragments.MenuBottomSheetFragment"
+        android:label="fragment_bottomSheet"
+        tools:layout="@layout/fragment_menu_bottom_sheet" />
+
+</navigation>

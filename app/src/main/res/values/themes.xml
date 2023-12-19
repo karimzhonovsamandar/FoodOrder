@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FoodOrder" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.FoodOrder" parent="Base.Theme.FoodOrder" />
+
+    <style name="AppTheme.Light" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Ваши настройки для светлой темы -->
+    </style>
+
+    <!-- Тема для темной темы -->
+    <style name="AppTheme.Dark" parent="Theme.AppCompat">
+        <!-- Ваши настройки для темной темы -->
+    </style>
+    
+    <style name="CustomSearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">@font/lato</item>
+    </style>
+
+</resources>
